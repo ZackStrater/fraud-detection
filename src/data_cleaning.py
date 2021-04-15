@@ -66,6 +66,8 @@ def df_apply(df1, encoder_filepath):
     df['sale_duration'].fillna(0, inplace=True)
     df['venue_latitude'].fillna(df['venue_latitude'].mean(), inplace=True)
     df['venue_longitude'].fillna(df['venue_longitude'].mean(), inplace=True)
+    df['org_twitter'].fillna(0)
+    df['org_facebook'].fillna(0)
     def get_ticket_info(lst):
         if len(lst) > 0:
             costs = []
