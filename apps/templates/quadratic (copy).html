@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Fraud Predictor</title>
+    <script src="{{ url_for('static', filename='brython.js')}}"></script>
+    <script src="{{ url_for('static', filename='brython_stdlib.js')}}"></script>
+
+
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='brapp.py') }}"></script>
+    <h1>Fraud Predictor</h1>
+    <p>Please drag and drop a json file from the Galvnize fraud API</p>
+    <p>Or enter ALL the information below</p>
+    <div id="dropContainer" style="border:1px solid black;height:100px;">
+        Drop Here
+     </div>
+       Should update here:
+       <input type="file" id="fileInput" />
+
+
+</body>
+</html>
