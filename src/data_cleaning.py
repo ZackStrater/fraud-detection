@@ -9,14 +9,14 @@ import re
 import pickle
 
 
-data = pd.read_json('data/data.json')
+data = pd.read_json('../data/fraud.json')
 
 def drop_columns(df1, list_o_columns=['approx_payout_date',
- 'sale_duration2',
- 'gts',
- 'num_payouts',
- 'num_order',
- 'sequence_number']):
+     'sale_duration2',
+     'gts',
+     'num_payouts',
+     'num_order',
+     'sequence_number']):
     '''
     drops from df1 all columns not existing in df2
     '''
@@ -113,5 +113,6 @@ def all(df, encoder_filepath):
     
     
 data = all(data, 'encoder.pickle')
+data.to_csv('../data/fixed_cleaned_data.csv', index=False)
 
 print(data)
